@@ -1,0 +1,114 @@
+body{
+    font-family: 'VT323', monospace;
+    background-color: gainsboro;
+}
+
+
+
+.content{
+    font-size: 40px;
+    padding-top: 3.5em;
+}
+
+.ticker-wrap {
+    position: fixed;
+      left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 8rem;
+    background-color: greenyellow;
+    box-sizing: content-box;
+  }
+
+  .ticker-wrap .ticker {
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 180s;
+    animation-duration: 180s;
+  }
+
+ 
+
+  @-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+.ticker-wrap:hover .ticker 
+{
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+}
+
+ .ticker-wrap .ticker__item {
+    display: inline-block;
+    padding: 2rem;
+    font-size: 6rem;
+    color: white;
+
+  }
+
+  .input{
+    width: 100%;
+     max-width: 360px;
+     box-sizing: border-box;
+
+  }
+
+  .btn{
+    background-color: blue;
+    border-color: transparent;
+    min-height: 60px;
+    width: auto;
+    font-size: 25px;
+  }
+
+  .btn:hover{
+    background-color: black;
+    border-color: transparent;
+
+  }
+
+  .btn:focus{
+    background-color: black;
+    border-color: transparent;
+  }
+
+.col-md-6 .offset-md-3{
+  margin: 20px;
+}
+
+.content-wrap{
+  margin-left:20px;
+  margin-right: auto;
+}
