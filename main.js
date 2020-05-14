@@ -6,9 +6,6 @@ let guessesCount = 5;
 let history = []
 let resetButton;
 
-
-
-
 // when user click Go button, fire the function "Guess"
 // "Guess" function grab the value that user typed
 // Compare with the value computer picked with user value
@@ -60,7 +57,8 @@ function reset(){
     document.getElementById("resultArea").innerHTML  = `Show Result`
     document.getElementById("guessesTries").innerHTML = `${guessesCount}`
     button = 0;
-    time = 26;
+    time = 25;
+    document.getElementById('timecount').innerHTML = time + ' seconds'
 }
 
  
@@ -82,13 +80,20 @@ function reset(){
  }
  timecounting()
 
- function timeOut() {
+ function timeOut(message) {
     clearInterval(myTime);
+    
 
  }
  
 
 
+// // function gameOver(){
+//     timeOut()
+//     document.getElementById("click").disabled = true
+//     doccument.getElementById('resultArea').innerHTML = `you are out of ${message}`
+
+// }
 
 
 // history.push(userNum) //add user Num to history array
