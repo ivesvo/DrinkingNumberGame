@@ -40,7 +40,7 @@ function guess(){
    
 
     if (guessesCount <= 0){
-        resultMessage = "Game Over. Chug! Dzô! 건배! ";
+        resultMessage = "Game Over. Chug! Dzô! 乾杯! ";
         document.getElementById("resultArea").innerHTML = `${resultMessage}`
         document.getElementById("click").disabled = true;
         document.getElementById("guessesTries").innerHTML = `${guessesCount}`;
@@ -69,7 +69,9 @@ function reset(){
  function timecounting() {
      myTime = setInterval (() => {
         if (time === 0){
-         document.getElementById('timecount').innerHTML = + `Time is Up!`
+         resultMessage = "Game Over. Chug! Dzô! 乾杯! ";
+         document.getElementById("resultArea").innerHTML = `${resultMessage}`
+         document.getElementById('timecount').innerHTML = `Time's Up!`
          document.getElementById("click").disabled = true;
          return;
         }
@@ -83,6 +85,7 @@ function reset(){
     clearInterval(myTime);
 
  }
+ 
 
 
 

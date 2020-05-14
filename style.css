@@ -103,7 +103,10 @@ body{
     background-color: blue;
     border-color: transparent;
   }
-
+.btn:disabled{
+  background-color: #af1414;
+  border-color: transparent;
+}
 .col-md-6 .offset-md-3{
   margin-left: 20px;
   margin-right:20px;
