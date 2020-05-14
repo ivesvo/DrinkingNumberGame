@@ -23,7 +23,8 @@ function guess(){
     let resultMessage = '' //save message result
     
     //guessesTries = guessesTries.splice(0,1)
- 
+    guessesCount--
+    
     if(randomNum > userNum){
         resultMessage = "Too Low"
     } else if(randomNum < userNum){
@@ -32,20 +33,21 @@ function guess(){
         resultMessage = "Correct!"
         timeOut();
     }
-    guessesCount--;
     history.push(userNum) 
     document.getElementById("resultArea").innerHTML = `${resultMessage}`
     document.getElementById("historyArea").innerHTML = `Your history guesses were: ${history}`
+    document.getElementById("guessesTries").innerHTML = `${guessesCount}`;
    
 
     if (guessesCount <= 0){
         resultMessage = "Game Over. Take a shot! ";
         document.getElementById("resultArea").innerHTML = `${resultMessage}`
         document.getElementById("click").disabled = true;
+        document.getElementById("guessesTries").innerHTML = `${guessesCount}`;
         timeOut();
         return;  
     }
-    document.getElementById("guessesTries").innerHTML = `${guessesCount}`;
+    
     
 }
 function reset(){
