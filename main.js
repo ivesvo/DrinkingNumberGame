@@ -40,7 +40,7 @@ function guess(){
    
 
     if (guessesCount <= 0){
-        resultMessage = "Game Over. Take a shot! ";
+        resultMessage = "Game Over. Chug! Dzô! 건배! ";
         document.getElementById("resultArea").innerHTML = `${resultMessage}`
         document.getElementById("click").disabled = true;
         document.getElementById("guessesTries").innerHTML = `${guessesCount}`;
