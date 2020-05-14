@@ -68,7 +68,8 @@ function reset(){
  let myTime; 
  function timecounting() {
      myTime = setInterval (() => {
-        if (time === 0){
+        if (time <= 0 ){
+         timeOut()   
          resultMessage = "Game Over. Chug! Dzô! 乾杯! ";
          document.getElementById("resultArea").innerHTML = `${resultMessage}`
          document.getElementById('timecount').innerHTML = `Time's Up!`
