@@ -60,11 +60,11 @@ function reset(){
     document.getElementById("resultArea").innerHTML  = `Show Result`
     document.getElementById("guessesTries").innerHTML = `${guessesCount}`
     button = 0;
-    time = 21;
+    time = 26;
 }
 
  
- let time = 21
+ let time = 26
  let myTime; 
  function timecounting() {
      myTime = setInterval (() => {
