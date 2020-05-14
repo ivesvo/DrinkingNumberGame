@@ -57,8 +57,8 @@ function reset(){
     document.getElementById("resultArea").innerHTML  = `Show Result`
     document.getElementById("guessesTries").innerHTML = `${guessesCount}`
     button = 0;
-    time = 25;
-    document.getElementById('timecount').innerHTML = time + ' seconds'
+    time = 26;
+    
 }
 
  
