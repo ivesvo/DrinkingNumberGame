@@ -38,7 +38,7 @@ function guess(){
     document.getElementById("historyArea").innerHTML = `Your history guesses were: ${history}`
    
 
-    if (guessesCount <= -1){
+    if (guessesCount <= 0){
         resultMessage = "Game Over. Take a shot! ";
         document.getElementById("resultArea").innerHTML = `${resultMessage}`
         document.getElementById("click").disabled = true;
@@ -48,37 +48,40 @@ function guess(){
     document.getElementById("guessesTries").innerHTML = `${guessesCount}`;
     
 }
-
- function reset(){
-     history = []
-     guessesCount = 5;
-     document.getElementById("guessNumber").value = ''
-     document.getElementById("historyArea").innerHTML = 'Your guesses will show here'
-     randomNum = Math.floor(Math.random()*100)+1
-     document.getElementById("click").disabled = false;
-     document.getElementById("resultArea").innerHTML  = `Show Result`
-     document.getElementById("guessesTries").innerHTML = `${guessesCount}`
-     button = 0;
-     time = 21;
- }
+function reset(){
+    history = []
+    guessesCount = 5;
+    document.getElementById("guessNumber").value = ''
+    document.getElementById("historyArea").innerHTML = 'Your guesses will show here'
+    randomNum = Math.floor(Math.random()*100)+1
+    document.getElementById("click").disabled = false;
+    document.getElementById("resultArea").innerHTML  = `Show Result`
+    document.getElementById("guessesTries").innerHTML = `${guessesCount}`
+    button = 0;
+    time = 21;
+}
 
  
  let time = 21
  let myTime; 
  function timecounting() {
-     myTime = setInterval(() => {
+     myTime = setInterval (() => {
+        if (time === 0){
+         document.getElementById('timecount').innerHTML = + `Time is Up!`
+         document.getElementById("click").disabled = true;
+         return;
+        }
          time -= 1
-         document.getElementById('timecount').innerHTML = time
-     }, 1000)// every 1 second, it will add 1 into time variable (computer use millisecond so 1000 is 1 second)
+         document.getElementById('timecount').innerHTML = time + ' seconds'
+      }, 1000)// every 1 second, it will add 1 into time variable (computer use millisecond so 1000 is 1 second)
  }
  timecounting()
 
  function timeOut() {
     clearInterval(myTime);
-    time = 21;
-    
-  }
- 
+
+ }
+
 
 
 
